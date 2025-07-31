@@ -18,7 +18,7 @@ export default function WelcomeScreen() {
   }, [fadeAnim]);
 
   const handleEnter = () => {
-    router.replace('/(tabs)');
+    router.replace('/Auth');
   };
 
   return (

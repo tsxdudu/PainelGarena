@@ -18,20 +18,20 @@ export function useAuth<T = any>(): UseApiResponse<T> {
 
     try {
       const response = await fetch(`https://glob-info2.vercel.app/info?uid=${uid}`, {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
       });
 
       if (!response.ok) {
-        throw new Error('Erro na requisição');
+        throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
       }
 
       const dataAuth = await response.json();
       setData(dataAuth);
     } catch (err: any) {
-      setError(err.message || 'Erro desconhecido');
+      setError(err.message);
     } finally {
       setLoading(false);
     }
