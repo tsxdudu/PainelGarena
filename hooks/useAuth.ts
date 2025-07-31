@@ -19,9 +19,6 @@ export function useAuth<T = any>(): UseApiResponse<T> {
     try {
       const response = await fetch(`https://glob-info2.vercel.app/info?uid=${uid}`, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
       });
 
       if (!response.ok) {
