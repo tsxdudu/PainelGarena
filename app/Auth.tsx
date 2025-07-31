@@ -1,11 +1,31 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { ActivityIndicator, Button, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, ScrollView, Button, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useAuth } from '../hooks/useAuth';
 
 const logos = [
-  require('../assets/images/logo_small_foot.jpg'),
-
+  require('../assets/produtos/naruto.png'),
+  require('../assets/produtos/kakashi.png'),
+  require('../assets/produtos/skinLaranja.png'),
+  require('../assets/produtos/blue.png'),
+  require('../assets/produtos/cabelobranco.png'),
+  require('../assets/produtos/coelha.png'),
+  require('../assets/produtos/coelhao.png'),
+  require('../assets/produtos/punho.png'),
+  require('../assets/produtos/dragao.png'),
+  require('../assets/produtos/calca.png'),
+  require('../assets/produtos/calca-azul.png'),
+  require('../assets/produtos/IMG-20250626-WA0008.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0009.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0010.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0011.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0012.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0013.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0014.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0015.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0016.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0017.jpg'),
+  require('../assets/produtos/IMG-20250626-WA0018.jpg'),
 ];
 
 export default function Auth() {
@@ -44,7 +64,7 @@ export default function Auth() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       {/* Modal */}
       <Modal
         visible={modalVisible}
@@ -98,7 +118,7 @@ export default function Auth() {
           </View>
         ))}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -193,20 +213,19 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 12,
     gap: 8,
   },
   logoContainer: {
     width: 56,
     height: 56,
-    margin: 8,
+    margin: 12,
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
   },
   logo: {
-    width: 48,
-    height: 48,
+    width: 72,
+    height: 72,
     borderRadius: 8,
   },
   logoSelected: {
