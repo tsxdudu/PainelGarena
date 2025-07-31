@@ -4,18 +4,7 @@ import { ActivityIndicator, Button, Image, Modal, StyleSheet, Text, TextInput, T
 import { useAuth } from '../hooks/useAuth';
 
 const logos = [
-  require('../assets/produtos/IMG-20250626-WA0008.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0009.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0010.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0011.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0012.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0013.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0014.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0015.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0016.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0017.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0018.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0019.jpg'),
+  require('../assets/images/logo_small_foot.jpg'),
 
 ];
 
@@ -63,7 +52,7 @@ export default function Auth() {
         animationType="fade"
         onRequestClose={() => {
           setModalVisible(false);
-          router.replace('/');
+          router.replace('/Painel');
         }}
       >
         <View style={styles.modalOverlay}>
@@ -72,7 +61,7 @@ export default function Auth() {
             <Text style={styles.modalDesc}>{modalDesc}</Text>
             <Button title="Fechar" onPress={() => {
               setModalVisible(false);
-              router.replace('/');
+              router.replace('/Painel');
             }} />
           </View>
         </View>
