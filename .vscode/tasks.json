@@ -1,0 +1,20 @@
+{
+  // Configuração de build e execução para Expo
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rodar Expo (web)",
+      "type": "shell",
+      "command": "npm run web",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Rodar Expo (android)",
+      "type": "shell",
+      "command": "npm run android",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
