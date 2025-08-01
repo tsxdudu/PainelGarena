@@ -17,7 +17,7 @@ export function useAuth<T = any>(): UseApiResponse<T> {
     setError(null);
 
     try {
-      const response = await fetch(`https://glob-info2.vercel.app/info?uid=${uid}`, {
+      const response = await fetch(`https://info-ob49.vercel.app/api/account/?uid=${uid}&region=br`, {
         method: 'GET',
       });
 

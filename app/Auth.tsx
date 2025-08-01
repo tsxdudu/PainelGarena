@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { ActivityIndicator, ScrollView, Button, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Button, Image, Modal, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useAuth } from '../hooks/useAuth';
 
 const logos = [
@@ -72,7 +72,6 @@ export default function Auth() {
         animationType="fade"
         onRequestClose={() => {
           setModalVisible(false);
-          router.replace('/Painel');
         }}
       >
         <View style={styles.modalOverlay}>
@@ -81,15 +80,14 @@ export default function Auth() {
             <Text style={styles.modalDesc}>{modalDesc}</Text>
             <Button title="Fechar" onPress={() => {
               setModalVisible(false);
-              router.replace('/Painel');
             }} />
           </View>
         </View>
       </Modal>
       {/* Header */}
-      <View style={styles.header}>
+      <TouchableOpacity style={styles.header} onPress={() => router.replace('/')}>
         <Image source={require('../assets/images/logo_small_foot.jpg')} style={[styles.logoHeader]}/>
-      </View>
+      </TouchableOpacity>
       {/* Main Card */}
       <View style={styles.card}>
         <View style={styles.inputRow}>
@@ -125,66 +123,95 @@ export default function Auth() {
 const styles = StyleSheet.create({
   modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.4)',
+    backgroundColor: 'rgba(0,0,0,0.7)',
     justifyContent: 'center',
     alignItems: 'center',
   },
   modalContent: {
-    backgroundColor: '#fff',
+    backgroundColor: '#111',
     padding: 32,
-    borderRadius: 16,
+    borderRadius: 20,
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 8,
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 12,
     minWidth: 260,
+    borderWidth: 2,
+    borderColor: '#fbff00ff',
   },
   modalTitle: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 12,
+    color: '#fbff00ff',
+    fontFamily: 'monospace',
+    textShadowColor: '#eff313ff',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 8,
+    textAlign: 'center',
   },
   modalDesc: {
     fontSize: 16,
     marginBottom: 24,
     textAlign: 'center',
+    color: '#fff',
+    fontFamily: 'monospace',
   },
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 8,
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
+    padding: 0,
   },
   header: {
     paddingTop: 28,
     paddingLeft: 28,
+    alignItems: 'flex-start',
   },
   logoHeader: {
-    width: 48,
-    height: 48,
+    width: 56,
+    height: 56,
+    borderRadius: 12,
+    backgroundColor: '#222',
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
+    elevation: 6,
   },
   card: {
     marginHorizontal: 24,
-    marginVertical: 48,
-    padding: 24,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
+    marginVertical: 32,
+    padding: 28,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    borderRadius: 24,
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 10,
+    borderWidth: 2,
+    borderColor: '#fbff00ff',
   },
   input: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 6,
-    padding: 12,
-    fontSize: 16,
+    borderWidth: 2,
+    borderColor: '#fbff00ff',
+    borderRadius: 12,
+    padding: 14,
+    fontSize: 18,
     marginRight: 12,
+    color: '#fbff00ff',
+    backgroundColor: '#222',
+    fontFamily: 'monospace',
+    fontWeight: 'bold',
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 2,
   },
   buttonContainer: {
     justifyContent: 'flex-end',
@@ -194,19 +221,27 @@ const styles = StyleSheet.create({
     marginVertical: 12,
   },
   error: {
-    color: 'red',
+    color: '#ff0000ff',
     marginTop: 8,
     marginBottom: 8,
+    fontFamily: 'monospace',
+    fontWeight: 'bold',
+    fontSize: 14,
   },
   result: {
     marginTop: 16,
     padding: 12,
-    backgroundColor: '#f6f6f6',
-    borderRadius: 6,
+    backgroundColor: '#222',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fbff00ff',
   },
   resultText: {
     fontWeight: 'bold',
     marginBottom: 4,
+    color: '#fbff00ff',
+    fontFamily: 'monospace',
+    fontSize: 16,
   },
   logoRow: {
     flexDirection: 'row',
@@ -214,31 +249,45 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 8,
+    marginBottom: 24,
   },
   logoContainer: {
-    width: 56,
-    height: 56,
-    margin: 12,
+    width: 64,
+    height: 64,
+    margin: 10,
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    backgroundColor: 'rgba(255, 204, 0, 0.07)',
+    borderRadius: 16,
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 2,
   },
   logo: {
-    width: 72,
-    height: 72,
-    borderRadius: 8,
+    width: 56,
+    height: 56,
+    borderRadius: 12,
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 2,
   },
   logoSelected: {
-    borderWidth: 2,
-    borderColor: '#ff0000ff',
-    backgroundColor: '#e6f0ff',
+    borderWidth: 3,
+    borderColor: '#fbff00ff',
+    backgroundColor: '#ffd70022',
+    shadowColor: '#ffd700',
+    shadowOpacity: 0.7,
+    shadowRadius: 8,
+    elevation: 4,
   },
   selectBox: {
     position: 'absolute',
     top: 54,
     left: 0,
     right: 0,
-    backgroundColor: '#ff0000ff',
+    backgroundColor: '#fbff00ff',
     borderRadius: 6,
     padding: 4,
     zIndex: 2,
