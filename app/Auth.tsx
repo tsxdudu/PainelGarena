@@ -4,8 +4,15 @@ import { ActivityIndicator, Button, Image, Modal, ScrollView, StyleSheet, Text, 
 import { useAuth } from '../hooks/useAuth';
 
 const logos = [
+  require('../assets/produtos/image.png'),
   require('../assets/produtos/naruto.png'),
   require('../assets/produtos/kakashi.png'),
+  require('../assets/produtos/image3.png'),
+  require('../assets/produtos/image4.png'),
+  require('../assets/produtos/image5.png'),
+  require('../assets/produtos/orochimaru.png'),
+  require('../assets/produtos/image2.png'),
+  require('../assets/produtos/image1.png'),
   require('../assets/produtos/skinLaranja.png'),
   require('../assets/produtos/blue.png'),
   require('../assets/produtos/cabelobranco.png'),
@@ -17,7 +24,6 @@ const logos = [
   require('../assets/produtos/calca-azul.png'),
   require('../assets/produtos/IMG-20250626-WA0008.jpg'),
   require('../assets/produtos/IMG-20250626-WA0009.jpg'),
-  require('../assets/produtos/IMG-20250626-WA0010.jpg'),
   require('../assets/produtos/IMG-20250626-WA0011.jpg'),
   require('../assets/produtos/IMG-20250626-WA0012.jpg'),
   require('../assets/produtos/IMG-20250626-WA0013.jpg'),
