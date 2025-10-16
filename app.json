@@ -42,8 +42,9 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "48251245-ff80-4490-a5f4-2ac0adf81676"
+        "projectId": "64b8bed7-1404-4346-9c91-bc4e90c057e2"
       }
-    }
+    },
+    "owner": "duxsv2"
   }
 }
