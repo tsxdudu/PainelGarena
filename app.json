@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "PainelGarena",
-    "slug": "PainelGarena",
+    "name": "Kronos777",
+    "slug": "kronos777",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "painelgarena",
+    "scheme": "kronos777",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -14,10 +14,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#312659"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.duxs.PainelGarena"
+      "package": "com.duxs.Kronos777"
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +32,7 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#312659"
         }
       ]
     ],
@@ -42,7 +42,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "8bbacb4e-3f7d-477f-b0e4-c748ccdb4ad4"
+        "projectId": "48251245-ff80-4490-a5f4-2ac0adf81676"
       }
     }
   }

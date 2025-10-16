@@ -3,24 +3,35 @@
  * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
  */
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Kronos777 Theme Colors
+const primaryPurple = '#895af6';
+const darkPurple = '#312659';
+const black = '#000000';
+
+const tintColorLight = primaryPurple;
+const tintColorDark = primaryPurple;
 
 export const Colors = {
   light: {
     text: '#11181C',
     background: '#fff',
     tint: tintColorLight,
-    icon: '#687076',
+    icon: darkPurple,
     tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    tabIconSelected: primaryPurple,
+    primary: primaryPurple,
+    secondary: darkPurple,
+    accent: black,
   },
   dark: {
     text: '#ECEDEE',
-    background: '#151718',
+    background: black,
     tint: tintColorDark,
-    icon: '#9BA1A6',
+    icon: primaryPurple,
     tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    tabIconSelected: primaryPurple,
+    primary: primaryPurple,
+    secondary: darkPurple,
+    accent: black,
   },
 };

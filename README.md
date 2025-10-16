@@ -1,4 +1,4 @@
-# PainelGarena
+# Painelkronos777
 
 Projeto base criado com Expo React Native usando o comando `npx create-expo-app .`.
 

@@ -1,14 +1,12 @@
 import { useRouter } from 'expo-router';
 import React, { useEffect, useRef } from 'react';
 import {
-  Animated,
-  Dimensions,
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Animated,
+    Dimensions,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -59,10 +57,8 @@ export default function CreditsScreen() {
   };
 
   return (
-    <ImageBackground
-      source={require('@/assets/images/mobile-bg.jpg')}
+    <View
       style={styles.container}
-      resizeMode="cover"
     >
       <Animated.Image
         source={require('@/assets/images/caca.png')}
@@ -113,14 +109,13 @@ export default function CreditsScreen() {
         <Text style={styles.title}>Créditos</Text>
         <View style={styles.line} />
         <Text style={styles.creditName}>duxs</Text>
-        <Text style={styles.creditName}>gobs</Text>
 
         <TouchableOpacity style={styles.button} onPress={handleBack}>
           <Text style={styles.buttonText}>VOLTAR</Text>
           <View style={styles.buttonGlow} />
         </TouchableOpacity>
       </Animated.View>
-    </ImageBackground>
+    </View>
   );
 }
 
@@ -162,10 +157,10 @@ const styles = StyleSheet.create({
     width: '90%',
   },
   title: {
-    color: '#fbff00ff',
+    color: '#895af6',
     fontSize: 36,
     fontWeight: 'bold',
-    textShadowColor: '#eff313ff',
+    textShadowColor: '#895af6',
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 10,
     marginBottom: 12,
@@ -173,10 +168,10 @@ const styles = StyleSheet.create({
   line: {
     width: 180,
     height: 3,
-    backgroundColor: '#fffb01ff',
+    backgroundColor: '#895af6',
     borderRadius: 1,
     marginBottom: 20,
-    shadowColor: '#ffe601ff',
+    shadowColor: '#895af6',
     shadowOpacity: 0.6,
     shadowRadius: 10,
   },
@@ -188,19 +183,19 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 30,
-    backgroundColor: '#f1cf0eff',
+    backgroundColor: '#312659',
     paddingVertical: 16,
     paddingHorizontal: 70,
     borderRadius: 30,
     borderWidth: 2,
-    borderColor: '#fcd601ff',
-    shadowColor: '#ffee00ff',
+    borderColor: '#895af6',
+    shadowColor: '#895af6',
     shadowOpacity: 0.6,
     shadowRadius: 12,
     position: 'relative',
   },
   buttonText: {
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
@@ -215,7 +210,7 @@ const styles = StyleSheet.create({
     left: -6,
     right: -6,
     bottom: -6,
-    backgroundColor: '#ffc400ff',
+    backgroundColor: '#895af6',
     borderRadius: 36,
     opacity: 0.25,
     zIndex: -1,
